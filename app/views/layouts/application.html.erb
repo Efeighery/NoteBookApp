@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NoteMakerApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href= "https://cdn.simplecss.org/simple.min.css" >
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <ul>
+    <p class="title">NoteMaker</p> 
+      <li> <%= link_to "Go to Notes", notes_path %> </li>
+      <li> <%= link_to "Home", root_path %> </li>
+      <li>   <%= link_to "Archives ", archives_path %> </li>
+    </ul>
+
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<% if current_user %>
+
+<p> Hello <%=current_user.email %></p>
+<p> Enjoy NoteMaker</p>
+<hr />
+
+<% if current_user.moderator? %>
+    <p> Voila, now you're a moderator </p>
+<% end %>
+
+<p> Your current role is <%= current_user.role %></p>
+<hr/>
+
+<%= link_to "Sign out", destroy_user_session_path, "data-turbo-method": :delete %>
+
+<% else %>
+
+<p> You aren't signed in </p>
+    <%= link_to "Sign In", new_user_registration_path %>
+    <%= link_to "Sign Out", new_user_session_path %>
+<% end %>
+
+<br>
+<br>
+<br>
+<h1>NoteMaker App Sessions page</h1>
+
+<div class= "box">
+<p>Welcome to NoteTaker!</p>
+
+<p>Here you can add notes for whatever you need
+Recipes, todo lists, bucket lists, personal reminders, etc.
+<br>You can even add images in the spare box below</p>
+
+<p>You can even make little archive notes with the Archives link incase there's anything important you want to jot down.</p>
+
+<p>So what are you waiting for? Click the links above to get started</p>
+</div>
