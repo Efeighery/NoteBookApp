@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  creator: MyString
+  content: MyText
+  spare_space: MyText
+
+two:
+  title: MyString
+  creator: MyString
+  content: MyText
+  spare_space: MyText
