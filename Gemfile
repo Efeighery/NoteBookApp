@@ -74,3 +74,6 @@ group :test do
 end
 
 gem "draper", "~> 4.0"
+
+gem 'devise'
+
